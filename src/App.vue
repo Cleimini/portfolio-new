@@ -1,30 +1,54 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <Header />
+  <Menu />
+  <Hero />
+  <Projects />
+  <Skills />
+  <Experiences />
+  <Footer />
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+  import Header from './components/Header.vue'
+  import Menu from './components/Menu.vue'
+  import Hero from './components/Hero.vue'
+  import Projects from './components/Projects.vue'
+  import Skills from './components/Skills.vue'
+  import Experiences from './components/Experiences.vue'
+  import Footer from './components/Footer.vue'
 
-nav {
-  padding: 30px;
+  export default {
+    components: {
+      Header,
+      Menu,
+      Hero,
+      Projects,
+      Skills,
+      Experiences,
+      Footer
+    },
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+    data() {
+      return {
+        
+      }
     }
   }
-}
+</script>
+
+<style lang="scss">
+  * {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 auto;
+  }
+
+  body, html {
+    font: {
+      family: 'Montserrat', sans-serif;
+      size: 0.875rem;
+    }
+
+    scroll-behavior: smooth;
+  }
 </style>
